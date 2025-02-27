@@ -1,0 +1,79 @@
+/* Основні стилі для хедера */
+.header {
+  width: 100%;
+  height: 60px;
+  background: #27282c;
+  box-shadow: -3px -5px 8px 0px #313439, 3px 5px 8px 0px #1d1e21,
+    0px 1px 8px 0px #1d1e2133 inset;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Кнопка сайдбару */
+.sidebar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* position: absolute; */
+}
+
+.sidebar-toggle .icon {
+  width: 30px;
+  height: 31.9px;
+}
+
+/* Логотип */
+.logo {
+  width: 93px;
+  height: 39.88px;
+  /* position: absolute; */
+  /* top: 10px;
+  left: 107px; */
+}
+
+/* Стилі для дати та часу */
+.date-time {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #8f8f8f;
+  /* position: absolute; */
+  /* top: 20.75px;
+  left: 1449.44px; */
+  width: 144px;
+  height: 19px;
+}
+
+/* Стилі для інформації про користувача */
+.user-info {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  /* top: 15px;
+  left: 1675.57px; */
+  gap: 10px;
+}
+
+.username {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.75px;
+  color: #8f8f8f;
+}
+
+.user-info .icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Загальний стиль для всіх іконок */
+.icon {
+  color: #8f8f8f;
+  fill: none;
+}
