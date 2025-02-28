@@ -1,0 +1,86 @@
+// Глобальні налаштування хедера
+.header {
+  width: 100%;
+  height: 60px;
+  background: #27282c;
+  box-shadow: -3px -5px 8px 0px #313439, 3px 5px 8px 0px #1d1e21,
+    0px 1px 8px 0px #1d1e2133 inset;
+  display: flex;
+  justify-content: space-between; // Розташування елементів по краях
+  align-items: center; // Вирівнюємо елементи по вертикалі
+  padding: 0; // Відступи хедера
+  box-sizing: border-box;
+  position: relative;
+}
+
+// Ліва частина (кнопка сайдбару + логотип)
+.header-logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .sidebar-toggle {
+    // Стили для кнопки сайдбару
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    .icon {
+      width: 30px;
+      height: 31.9px;
+      margin-right: 24px;
+      margin-left: 15px;
+    }
+  }
+
+  // Тег hr для вертикальної лінії
+  .sidebar-line {
+    width: 1px;
+    height: 60px;
+    background-color: #8f8f8f;
+    border: none;
+    margin-right: 37px;
+  }
+
+  .logo {
+    width: 93px;
+    height: 40px;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+
+  .date-time {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #8f8f8f;
+    margin-right: 82.14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 144px; // Регулюй ширину під макет
+  }
+
+  .username {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #8f8f8f;
+    margin-right: 10px;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+  }
+}
+
+.icon {
+  fill: none;
+  color: #8f8f8f;
+}

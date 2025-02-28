@@ -1,0 +1,47 @@
+// Змінні для кольорів
+$primary-bg: #f4f4f4;
+$header-bg: #27282c;
+$button-bg: #007bff;
+$button-hover-bg: #0056b3;
+$event-bg: #28a745;
+$event-hover-bg: #218838;
+$text-color: white;
+
+/* Стилі для календаря */
+#calendar {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: $primary-bg;
+  border-radius: 10px;
+  padding: 20px;
+
+  /* Стиль для заголовку календаря */
+  .fc-toolbar {
+    background-color: $header-bg;
+    border-radius: 10px;
+    padding: 10px;
+    color: $text-color;
+  }
+
+  /* Стилі для кнопок */
+  .fc-button {
+    background-color: $button-bg;
+    color: $text-color;
+
+    &:hover {
+      background-color: $button-hover-bg;
+    }
+  }
+
+  /* Стилі для подій */
+  .fc-event {
+    background-color: $event-bg;
+    color: $text-color;
+    border-radius: 5px;
+    padding: 5px;
+
+    &:hover {
+      background-color: $event-hover-bg;
+    }
+  }
+}

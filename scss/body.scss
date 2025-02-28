@@ -1,0 +1,19 @@
+body {
+  background-image: url("../images/bg-desktop.jpg");
+  background-color: #00008b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @media (max-width: 1024px) {
+    // Планшети
+    background-image: url("../images/bg-tablet.jpg");
+  }
+
+  @media (max-width: 768px) {
+    // Телефони
+    background-image: url("../images/bg-mobile.jpg");
+    background-attachment: scroll; // Знімаємо фіксований фон для покращення продуктивності
+  }
+}
