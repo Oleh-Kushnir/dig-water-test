@@ -48,7 +48,12 @@
     <div class="sidebar">
       <div class="sidebar__decorative">
         <div class="sidebar__wrapper">
-          <svg class="sidebar__icon" width="30" height="30" viewBox="0 0 30 30">
+          <svg
+            class="sidebar__icon-map"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+          >
             <path
               d="M11 28.2134L2.31623 31.1081C1.6687 31.3239 1 30.8419 1 30.1593V5.60085C1 5.17042 1.27543 4.78827 1.68377 4.65217L11 1.54675M11 28.2134L21 31.5468M11 28.2134V1.54675M11 1.54675L21 4.88009M21 31.5468L30.3162 28.4414C30.7245 28.3053 31 27.9231 31 27.4926V2.93419C31 2.25162 30.3313 1.76965 29.6838 1.9855L21 4.88009M21 31.5468V4.88009"
               stroke="#27282C"
@@ -59,30 +64,15 @@
           </svg>
         </div>
       </div>
-      <div class="sidebar__header">
+      <div class="sidebar__search">
         <input
           type="text"
           class="sidebar__input"
           placeholder="ННС Назва об'єкта"
         />
-        <button class="sidebar__search">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2" />
-            <line
-              x1="16"
-              y1="16"
-              x2="22"
-              y2="22"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
+        <button class="sidebar__icon-search">
+          <svg class="sidebar__icon-loop">
+            <use href="./images/icons.svg#icon-loop"></use>
           </svg>
         </button>
       </div>
@@ -90,31 +80,94 @@
         <span class="sidebar__filters-title">ФІЛЬТРИ</span>
         <span class="sidebar__filters-count">4</span>
       </div>
-      <ul class="sidebar__list">
-        <li class="sidebar__item sidebar__item--active">
-          ННС
-          <svg
-            width="16"
-            height="16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 5l6 6 6-6"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </li>
-        <li class="sidebar__item">МАШ ЗАЛ</li>
-        <li class="sidebar__item">ЗАГАЛЬНИЙ</li>
-        <li class="sidebar__item">КЛІМАТ КОНТРОЛЬ</li>
-      </ul>
+      <div class="scrollable-container">
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <div class="sidebar__wrapper">
+              <div class="sidebar__content sidebar__toggle" tabindex="0">
+                ННС
+              </div>
+              <button
+                class="sidebar__button-checkpoint sidebar__button-checkpoint--active"
+              >
+                <svg class="sidebar__icon-checkpoint">
+                  <use href="./images/icons.svg#icon-checkpoint"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="sidebar__submenu">
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">МАШ ЗАЛ</a>
+              </li>
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">ЗАГАЛЬНИЙ</a>
+              </li>
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">КЛІМАТ КОНТРОЛЬ</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <div class="sidebar__wrapper">
+              <div class="sidebar__content sidebar__toggle" tabindex="0">
+                ННС
+              </div>
+              <button
+                class="sidebar__button-checkpoint sidebar__button-checkpoint--active"
+              >
+                <svg class="sidebar__icon-checkpoint">
+                  <use href="./images/icons.svg#icon-checkpoint"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="sidebar__submenu">
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">МАШ ЗАЛ</a>
+              </li>
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">ЗАГАЛЬНИЙ</a>
+              </li>
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">КЛІМАТ КОНТРОЛЬ</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <div class="sidebar__wrapper">
+              <div class="sidebar__content sidebar__toggle" tabindex="0">
+                ННС
+              </div>
+              <button
+                class="sidebar__button-checkpoint sidebar__button-checkpoint--active"
+              >
+                <svg class="sidebar__icon-checkpoint">
+                  <use href="./images/icons.svg#icon-checkpoint"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="sidebar__submenu">
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">МАШ ЗАЛ</a>
+              </li>
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">ЗАГАЛЬНИЙ</a>
+              </li>
+              <li class="sidebar__submenu-item">
+                <a href="" class="sidebar__submenu-content">КЛІМАТ КОНТРОЛЬ</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
       <div class="sidebar__footer">
-        <span>Всього обєктів</span>
-        <span>3</span>
+        <span class="sidebar__footer-content">Всього обєктів</span>
+        <span class="sidebar__footer-count">3</span>
       </div>
     </div>
     <script src="./js/calendar.js"></script>
