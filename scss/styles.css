@@ -128,6 +128,17 @@ body {
   }
 }
 
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Чим більше значення, тим темніше */
+  z-index: -1; /* Щоб шар був під контентом */
+}
+
 .sidebar {
   position: fixed;
   top: 60px;
@@ -148,6 +159,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 24.55px;
+  padding: 15px 180px;
 }
 .sidebar__icon-map {
   overflow: visible;
@@ -205,7 +217,7 @@ body {
   align-items: center; /* Вирівнює по вертикалі */
   width: 260px;
   height: 100%;
-  padding: 0 0 0 93px;
+  padding: 15px 0 17px 93px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #27282c;
@@ -301,6 +313,11 @@ body {
   background-color: #27282c;
   color: #8f8f8f;
   margin-top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box; /* Для правильного обчислення ширини */
+  z-index: 1; /* Забезпечує, щоб футер був поверх іншого вмісту */
 }
 .sidebar__footer-content {
   width: 239.015625px;
@@ -329,27 +346,30 @@ body {
 }
 
 .scrollable-container {
-  height: 100vh;
-  overflow-y: scroll;
+  flex-grow: 1;
+  overflow-y: scroll; /* Дозволяє вертикальний скролінг */
   margin-top: 20px;
+}
+
+.sidebar__content-wrapper {
+  display: flex;
+  overflow: hidden;
 }
 
 /* Стилізація полоси прокручування */
 .scrollable-container::-webkit-scrollbar {
   width: 30px;
-  background-color: rgba(39, 40, 44, 0.5019607843);
-  border-radius: 8px;
-}
-
-/* Стилізація фону полоски прокручування */
-.scrollable-container::-webkit-scrollbar-track {
-  background-color: rgba(39, 40, 44, 0.5019607843);
+  background-color: #27282c;
+  border-radius: 20px;
 }
 
 /* Стилізація самого "повзунка" полоски прокручування */
 .scrollable-container::-webkit-scrollbar-thumb {
   background: #2b98cc;
   border-radius: 3px;
-  width: 8px;
-  border: 11px solid rgba(39, 40, 44, 0.5019607843);
+  border-left: 11px solid #27282c;
+  border-right: 11px solid #27282c;
+  border-top: 7px solid #27282c;
+  border-bottom: 7px solid #27282c;
+  border-radius: 15px;
 }/*# sourceMappingURL=styles.css.map */

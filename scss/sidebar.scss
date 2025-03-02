@@ -18,6 +18,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 24.55px;
+    padding: 15px 180px;
   }
 
   &__icon-map {
@@ -83,7 +84,7 @@
     align-items: center; /* Вирівнює по вертикалі */
     width: 260px;
     height: 100%;
-    padding: 0 0 0 93px;
+    padding: 15px 0 17px 93px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #27282c;
@@ -105,10 +106,6 @@
     padding: 0;
     margin-bottom: 20px;
     margin-top: 0;
-  }
-
-  // Стилі для li
-  &__item {
   }
 
   &__wrapper {
@@ -197,6 +194,11 @@
     background-color: #27282c;
     color: #8f8f8f;
     margin-top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* Для правильного обчислення ширини */
+    z-index: 1; /* Забезпечує, щоб футер був поверх іншого вмісту */
   }
 
   &__footer-content {
@@ -232,27 +234,30 @@
 }
 
 .scrollable-container {
-  height: 100vh;
-  overflow-y: scroll;
+  flex-grow: 1;
+  overflow-y: scroll; /* Дозволяє вертикальний скролінг */
   margin-top: 20px;
+}
+
+.sidebar__content-wrapper {
+  display: flex;
+  overflow: hidden;
 }
 
 /* Стилізація полоси прокручування */
 .scrollable-container::-webkit-scrollbar {
   width: 30px;
-  background-color: #27282c80;
-  border-radius: 8px;
-}
-
-/* Стилізація фону полоски прокручування */
-.scrollable-container::-webkit-scrollbar-track {
-  background-color: #27282c80;
+  background-color: #27282c;
+  border-radius: 20px;
 }
 
 /* Стилізація самого "повзунка" полоски прокручування */
 .scrollable-container::-webkit-scrollbar-thumb {
   background: #2b98cc;
   border-radius: 3px;
-  width: 8px;
-  border: 11px solid #27282c80;
+  border-left: 11px solid #27282c;
+  border-right: 11px solid #27282c;
+  border-top: 7px solid #27282c;
+  border-bottom: 7px solid #27282c;
+  border-radius: 15px;
 }

@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .sidebar__decorative {
   width: 100%;
   height: 60px;
@@ -21,29 +22,34 @@
   margin-top: 24.55px;
   padding: 15px 180px;
 }
+
 .sidebar__icon-map {
   overflow: visible;
   max-width: 30px;
   max-height: 30px;
   fill: none;
 }
+
 .sidebar__icon-loop {
   width: 22.75px;
   height: 22.92px;
   fill: none;
 }
+
 .sidebar__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
+
 .sidebar__search {
   display: flex;
   align-items: center;
   height: 50px;
   margin-top: 20px;
 }
+
 .sidebar__input {
   flex-grow: 1;
   height: 100%;
@@ -54,6 +60,7 @@
   font-size: 16px;
   border-radius: 5px;
 }
+
 .sidebar__icon-search {
   background: none;
   border: none;
@@ -64,6 +71,7 @@
   width: 110px;
   height: 50px;
 }
+
 .sidebar__filters {
   display: flex;
   justify-content: space-between;
@@ -72,6 +80,7 @@
   margin-top: 20px;
   box-sizing: border-box;
 }
+
 .sidebar__filters-title {
   display: flex;
   align-items: center; /* Вирівнює по вертикалі */
@@ -82,6 +91,7 @@
   border-bottom-right-radius: 15px;
   background-color: #27282c;
 }
+
 .sidebar__filters-count {
   display: flex;
   align-items: center;
@@ -92,17 +102,20 @@
   border-bottom-left-radius: 15px;
   background-color: #27282c;
 }
+
 .sidebar__list {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
   margin-top: 0;
 }
+
 .sidebar__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .sidebar__content {
   background-color: #2b98cc;
   width: 260px;
@@ -112,6 +125,7 @@
   display: flex;
   align-items: center;
 }
+
 .sidebar__button-checkpoint {
   width: 57px;
   height: 50px;
@@ -125,19 +139,24 @@
   transition: background 0.3s;
   cursor: pointer;
 }
+
 .sidebar__button-checkpoint:hover {
   border: 2px solid #2b98cc;
 }
+
 .sidebar__button-checkpoint:active, .sidebar__button-checkpoint--active {
   background: #2b98cc;
 }
+
 .sidebar__button-checkpoint:focus {
   border: 2px solid #2b98cc;
 }
+
 .sidebar__icon-checkpoint {
   width: 23px;
   height: 31px;
 }
+
 .sidebar__submenu {
   list-style: none;
   padding: 0;
@@ -146,14 +165,17 @@
   overflow: hidden;
   transition: max-height 0.1s;
 }
+
 .sidebar__item--open .sidebar__submenu {
   max-height: 200px;
 }
+
 .sidebar__submenu-item {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
+
 .sidebar__submenu-content {
   width: 317px;
   height: 30px;
@@ -166,6 +188,7 @@
   text-decoration: none;
   color: white;
 }
+
 .sidebar__footer {
   display: flex;
   justify-content: space-between;
@@ -179,6 +202,7 @@
   box-sizing: border-box; /* Для правильного обчислення ширини */
   z-index: 1; /* Забезпечує, щоб футер був поверх іншого вмісту */
 }
+
 .sidebar__footer-content {
   width: 239.015625px;
   height: 32px;
@@ -191,6 +215,7 @@
   line-height: 18.75px;
   text-align: center;
 }
+
 .sidebar__footer-count {
   width: 57px;
   height: 32px;
@@ -232,4 +257,6 @@
   border-top: 7px solid #27282c;
   border-bottom: 7px solid #27282c;
   border-radius: 15px;
-}/*# sourceMappingURL=sidebar.css.map */
+} 
+
+/*# sourceMappingURL=sidebar.css.map */
