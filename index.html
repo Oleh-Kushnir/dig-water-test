@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Header</title>
+    <title>DigitalWater</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css"
       rel="stylesheet"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css"
       rel="stylesheet"
@@ -36,12 +41,103 @@
       </div>
       <div class="user-info">
         <div class="date-time" id="current-date-time"></div>
-        <span class="username">Ім'я користувача</span>
+        <span class="username">Бронівогневладислав</span>
         <svg class="icon">
           <use href="./images/icons.svg#icon-user"></use>
         </svg>
       </div>
     </header>
+
+    <!-- Модалка з головної інфо -->
+
+    <div class="modal-backdrop">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="wifi-indicator">
+            <svg class="icon-wifi">
+              <use xlink:href="./images/icons.svg#icon-wifi"></use>
+            </svg>
+            <span class="time">10:22:23</span>
+          </div>
+          <div class="user-info-modal">Степан Степаненківський</div>
+        </div>
+
+        <div class="system-state">
+          <div class="system-status">
+            <div class="system-title">Cтан системи</div>
+            <ul class="system-list">
+              <li class="status-item">
+                <span class="status-indicator"></span>
+                <span class="status-text">Система готова</span>
+              </li>
+              <li class="status-item">
+                <span class="status-indicator"></span>
+                <span class="status-text">Система в роботі</span>
+              </li>
+              <li class="status-item">
+                <span class="status-indicator"></span>
+                <span class="status-text">Система не готова</span>
+              </li>
+              <li class="status-item">
+                <span class="status-indicator"></span>
+                <span class="status-text">Система зупинена</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="alert-panel">
+            <div class="alert-item"></div>
+          </div>
+        </div>
+
+        <div class="pumps-container">
+          <div class="pump">
+            <div class="pump-icon">💧</div>
+            <div class="pump-info">
+              <div class="pump-title">Насос 1</div>
+              <div>Стан: Робота</div>
+            </div>
+          </div>
+          <div class="pump">
+            <div class="pump-icon">💧</div>
+            <div class="pump-info">
+              <div class="pump-title">Насос 2</div>
+              <div>Стан: Очікування</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="monitoring-panel">
+          <div class="gauge-container">
+            <div class="gauge">
+              <div class="gauge-arc"></div>
+              <div class="gauge-needle"></div>
+            </div>
+            <div class="gauge-value">
+              <div class="value-large">75%</div>
+              <div class="value-unit">Завантаження</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="water-level">
+          <div class="tank">
+            <div class="water"></div>
+          </div>
+          <div>Рівень води</div>
+        </div>
+
+        <div class="control-buttons">
+          <button class="btn btn-off">Вимкнути</button>
+          <button class="btn btn-on">Увімкнути</button>
+        </div>
+
+        <div class="footer">
+          <div>© 2025 Система моніторингу</div>
+          <div>Контакт: support@example.com</div>
+        </div>
+      </div>
+    </div>
 
     <!-- // Sidebar  -->
 
@@ -118,9 +214,7 @@
                 <div class="sidebar__content sidebar__toggle" tabindex="0">
                   ННС
                 </div>
-                <button
-                  class="sidebar__button-checkpoint sidebar__button-checkpoint--active"
-                >
+                <button class="sidebar__button-checkpoint">
                   <svg class="sidebar__icon-checkpoint">
                     <use href="./images/icons.svg#icon-checkpoint"></use>
                   </svg>
@@ -148,9 +242,7 @@
                 <div class="sidebar__content sidebar__toggle" tabindex="0">
                   ННС
                 </div>
-                <button
-                  class="sidebar__button-checkpoint sidebar__button-checkpoint--active"
-                >
+                <button class="sidebar__button-checkpoint">
                   <svg class="sidebar__icon-checkpoint">
                     <use href="./images/icons.svg#icon-checkpoint"></use>
                   </svg>

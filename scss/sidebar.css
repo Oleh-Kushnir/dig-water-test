@@ -1,15 +1,16 @@
 @charset "UTF-8";
 .sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
   width: 390px;
-  height: calc(100vh - 60px);
+  height: 100vh;
   background-color: rgba(39, 40, 44, 0.8);
   color: white;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding-top: 60px;
+  z-index: 100;
 }
 .sidebar__decorative {
   width: 100%;
@@ -31,12 +32,6 @@
   width: 22.75px;
   height: 22.92px;
   fill: none;
-}
-.sidebar__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 }
 .sidebar__search {
   display: flex;
@@ -81,6 +76,8 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #27282c;
+  font-weight: 700;
+  font-size: 14px;
 }
 .sidebar__filters-count {
   display: flex;
@@ -91,6 +88,8 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-color: #27282c;
+  font-weight: 500;
+  font-size: 24px;
 }
 .sidebar__list {
   list-style: none;
@@ -111,6 +110,9 @@
   border-bottom-right-radius: 15px;
   display: flex;
   align-items: center;
+  padding-left: 41px;
+  font-weight: 700;
+  font-size: 16px;
 }
 .sidebar__button-checkpoint {
   width: 57px;
@@ -162,7 +164,7 @@
   border-bottom-right-radius: 15px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 41px;
   text-decoration: none;
   color: white;
 }
@@ -173,11 +175,7 @@
   background-color: #27282c;
   color: #8f8f8f;
   margin-top: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box; /* Для правильного обчислення ширини */
-  z-index: 1; /* Забезпечує, щоб футер був поверх іншого вмісту */
+  padding: 11px 0 42px;
 }
 .sidebar__footer-content {
   width: 239.015625px;
@@ -189,25 +187,30 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18.75px;
-  text-align: center;
+  padding: 6px 20px;
+  margin-left: 20px;
 }
 .sidebar__footer-count {
   width: 57px;
   height: 32px;
   border-radius: 10px;
-  margin: 11px 53px 42px 20px;
+  margin-right: 53px;
   background-color: #27282c;
   box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
   line-height: 18.75px;
-  text-align: center;
+  padding: 6px 26px;
+}
+
+.sidebar.open {
+  transform: translateX(0);
 }
 
 .scrollable-container {
   flex-grow: 1;
-  overflow-y: scroll; /* Дозволяє вертикальний скролінг */
+  overflow-y: scroll;
   margin-top: 20px;
 }
 
@@ -216,14 +219,12 @@
   overflow: hidden;
 }
 
-/* Стилізація полоси прокручування */
 .scrollable-container::-webkit-scrollbar {
   width: 30px;
   background-color: #27282c;
   border-radius: 20px;
 }
 
-/* Стилізація самого "повзунка" полоски прокручування */
 .scrollable-container::-webkit-scrollbar-thumb {
   background: #2b98cc;
   border-radius: 3px;

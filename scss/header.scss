@@ -6,11 +6,11 @@
   box-shadow: -3px -5px 8px 0px #313439, 3px 5px 8px 0px #1d1e21,
     0px 1px 8px 0px #1d1e2133 inset;
   display: flex;
-  justify-content: space-between; // Розташування елементів по краях
-  align-items: center; // Вирівнюємо елементи по вертикалі
-  padding: 0; // Відступи хедера
-  box-sizing: border-box;
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  position: fixed;
+  z-index: 100;
 }
 
 // Ліва частина (кнопка сайдбару + логотип)
@@ -50,6 +50,7 @@
 }
 
 .user-info {
+  font-family: "Inter", sans-serif;
   display: flex;
   align-items: center;
 

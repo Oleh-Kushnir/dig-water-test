@@ -1,0 +1,243 @@
+$primary-bg: #1a2036;
+$modal-bg: #27282c;
+$panel-bg: rgba(30, 35, 45, 0.7);
+$border-color: #3a3f4b;
+$highlight-color: #00c8ff;
+$text-muted: #8f8f8f;
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 940px;
+  height: 645px;
+  background-color: $modal-bg;
+  border-radius: 15px;
+  box-shadow: -3px -5px 8px 0px #313439, 3px 5px 8px 0px #1d1e21,
+    0px 1px 8px 0px rgba(29, 30, 33, 0.2) inset;
+  padding: 30px 80px;
+  color: $text-muted;
+}
+
+// header =================================>>>>>>>>>>>>>>>
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-color;
+}
+
+.wifi-indicator {
+  display: flex;
+  align-items: center;
+  .icon-wifi {
+    width: 26px;
+    height: 21px;
+  }
+  .time {
+    width: 140px;
+    height: 32px;
+    color: $text-muted;
+    margin-left: 21.4px;
+    box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
+    border-radius: 10px;
+    padding: 5px 40px;
+  }
+}
+
+.user-info-modal {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: $text-muted;
+  box-shadow: -3px -5px 8px 0px #313439, 3px 5px 8px 0px #1d1e21,
+    0px 1px 8px 0px #1d1e2133 inset;
+  width: 286.46875px;
+  height: 32px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+
+// status ================================>>>>>>>>>>>>>
+
+.system-state {
+  display: flex;
+  justify-content: space-between;
+}
+
+.system-status {
+  width: 380.1171875px;
+  height: 105.66374206542969px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
+  display: flex;
+  flex-direction: column;
+}
+
+.system-title {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.system-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.status-item {
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #666;
+}
+.alert-panel,
+.pumps-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.pump {
+  display: flex;
+  align-items: center;
+  background-color: $panel-bg;
+  padding: 15px;
+  border-radius: 6px;
+  width: 45%;
+  .pump-icon {
+    margin-right: 15px;
+    color: $highlight-color;
+  }
+  .pump-info {
+    color: $text-muted;
+    font-size: 12px;
+  }
+  .pump-title {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+
+.monitoring-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+gauge-container {
+  background-color: $panel-bg;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .gauge {
+    width: 120px;
+    height: 60px;
+    position: relative;
+    margin: 10px 0;
+    .gauge-arc {
+      width: 100%;
+      height: 100%;
+      border-radius: 120px 120px 0 0;
+      border: 6px solid $border-color;
+      border-bottom: none;
+    }
+    .gauge-needle {
+      position: absolute;
+      width: 4px;
+      height: 60px;
+      background-color: $highlight-color;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(20deg);
+      transform-origin: bottom center;
+    }
+  }
+}
+
+.water-level {
+  background-color: $panel-bg;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .tank {
+    width: 60px;
+    height: 100px;
+    border: 2px solid $border-color;
+    border-radius: 8px;
+    position: relative;
+    margin: 10px 0;
+    .water {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background-color: $highlight-color;
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  .btn {
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .btn-off {
+    background-color: $border-color;
+    color: white;
+  }
+  .btn-on {
+    background-color: $highlight-color;
+    color: white;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: $text-muted;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid $border-color;
+}
