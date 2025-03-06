@@ -35,9 +35,7 @@ $text-muted: #8f8f8f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $border-color;
+  padding-bottom: 12px;
 }
 
 .wifi-indicator {
@@ -77,6 +75,8 @@ $text-muted: #8f8f8f;
 .system-state {
   display: flex;
   justify-content: space-between;
+  height: 105.6637420654px;
+  align-items: flex-end;
 }
 
 .system-status {
@@ -86,6 +86,7 @@ $text-muted: #8f8f8f;
   box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .system-title {
@@ -94,7 +95,7 @@ $text-muted: #8f8f8f;
   font-weight: 700;
   font-size: 16px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 .system-list {
@@ -105,9 +106,29 @@ $text-muted: #8f8f8f;
   font-size: 12px;
   list-style: none;
   text-transform: uppercase;
+  margin-bottom: 10.9px;
+  margin-left: 21.1px;
 }
 
 .status-item {
+  display: flex;
+  justify-content: space-between;
+  width: 153.29345703125px;
+  height: 21.22314453125px;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.status-shape {
+  width: 21.22314453125px;
+  height: 21.22314453125px;
+  border-radius: 50%;
+  background-color: #27282c;
+  box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .status-indicator {
@@ -115,35 +136,102 @@ $text-muted: #8f8f8f;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  margin-right: 10px;
-  background-color: #666;
+  background-color: #8f8f8f;
 }
-.alert-panel,
+
+.status-item.active-status .status-text {
+  color: #00ffff;
+}
+
+.status-item.active-status .status-indicator {
+  background-color: #00ffff;
+}
+
+.index {
+  width: 380.1171875px;
+  height: 98.53280639648438px;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item-bell {
+    width: 56.57326126098633px;
+    height: 96.95956420898438px;
+    padding: 29.48px 12px;
+  }
+
+  &__icon-bell {
+    width: 29.89160919189453px;
+    height: 38.00132751464844px;
+    fill: none;
+  }
+
+  &__item {
+    width: 56.57326126098633px;
+    height: 96.95956420898438px;
+    border-radius: 10px;
+    box-shadow: -3px -5px 8px 0px #313439, 3px 5px 8px 0px #1d1e21,
+      0px 1px 8px 0px #1d1e2133 inset;
+    margin-left: 20.6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__line {
+    height: 1px;
+    width: 39.2px;
+    background-color: #1b1b1b;
+    border: none;
+    margin: 0 8px;
+  }
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+    margin: 18.6px 0 16.27px;
+  }
+
+  &__count {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+}
+
 .pumps-container {
+  margin-top: 21.5px;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  .pump:nth-child(2) {
+    margin-left: 19.84px;
+  }
 }
 
 .pump {
   display: flex;
-  align-items: center;
-  background-color: $panel-bg;
-  padding: 15px;
-  border-radius: 6px;
-  width: 45%;
-  .pump-icon {
-    margin-right: 15px;
-    color: $highlight-color;
+  width: 380.1171875px;
+  height: 98.53280639648438px;
+  background: $modal-bg;
+  box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
+  border-radius: 10px;
+
+  &__icon {
+    width: 33px;
+    height: 49px;
+    fill: none;
+    margin: 26px 23px 26px 27.42px;
   }
-  .pump-info {
-    color: $text-muted;
-    font-size: 12px;
+  &__info {
+    display: flex;
+    flex-direction: column;
   }
-  .pump-title {
-    font-weight: bold;
-    margin-top: 5px;
-    font-size: 16px;
+  &__section {
+  }
+  &__count {
   }
 }
 

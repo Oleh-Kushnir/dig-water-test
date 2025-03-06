@@ -66,43 +66,104 @@
           <div class="system-status">
             <div class="system-title">Cтан системи</div>
             <ul class="system-list">
-              <li class="status-item">
-                <span class="status-indicator"></span>
+              <li class="status-item" data-status="ready">
                 <span class="status-text">Система готова</span>
+                <div class="status-shape">
+                  <span class="status-indicator"></span>
+                </div>
               </li>
-              <li class="status-item">
-                <span class="status-indicator"></span>
+              <li class="status-item active-status" data-status="working">
                 <span class="status-text">Система в роботі</span>
+                <div class="status-shape">
+                  <span class="status-indicator"></span>
+                </div>
               </li>
-              <li class="status-item">
-                <span class="status-indicator"></span>
+              <li class="status-item" data-status="not-ready">
                 <span class="status-text">Система не готова</span>
+                <div class="status-shape">
+                  <span class="status-indicator"></span>
+                </div>
               </li>
-              <li class="status-item">
-                <span class="status-indicator"></span>
+              <li class="status-item" data-status="stopped">
                 <span class="status-text">Система зупинена</span>
+                <div class="status-shape">
+                  <span class="status-indicator"></span>
+                </div>
               </li>
             </ul>
           </div>
-
-          <div class="alert-panel">
-            <div class="alert-item"></div>
+          <div class="index">
+            <ul class="index__list">
+              <li class="index__item-bell">
+                <svg class="index__icon-bell">
+                  <use xlink:href="./images/icons.svg#icon-bell" />
+                </svg>
+              </li>
+              <li class="index__item">
+                <span class="index__figure"
+                  ><svg width="25" height="25" fill="none">
+                    <use href="./images/icons.svg#icon-triangle" />
+                  </svg>
+                </span>
+                <hr class="index__line" />
+                <span class="index__count">1</span>
+              </li>
+              <li class="index__item">
+                <span class="index__figure"
+                  ><svg width="25" height="25" fill="none">
+                    <use href="./images/icons.svg#icon-diamond" />
+                  </svg>
+                </span>
+                <hr class="index__line" />
+                <span class="index__count">4</span>
+              </li>
+              <li class="index__item">
+                <span class="index__figure"
+                  ><svg width="25" height="25" fill="none">
+                    <use href="./images/icons.svg#icon-pentagon" />
+                  </svg>
+                </span>
+                <hr class="index__line" />
+                <span class="index__count">6</span>
+              </li>
+              <li class="index__item">
+                <span class="index__figure"
+                  ><svg width="25" height="25" fill="none">
+                    <use href="./images/icons.svg#icon-hexagon" />
+                  </svg>
+                </span>
+                <hr class="index__line" />
+                <span class="index__count">10</span>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div class="pumps-container">
           <div class="pump">
-            <div class="pump-icon">💧</div>
-            <div class="pump-info">
-              <div class="pump-title">Насос 1</div>
-              <div>Стан: Робота</div>
+            <span class="pump__icon">
+              <svg width="33" height="49" fill="none">
+                <use href="./images/icons.svg#icon-pump" />
+              </svg>
+            </span>
+            <div class="pump__info">
+              <span class="pump__data">Сьогодні</span>
+              <span class="pump__pusk">Пусків: 99</span>
+              <span class="pump__mtg">мтг: 10:22</span>
+              <div class="pump__section"><span>насос №1</span></div>
             </div>
           </div>
           <div class="pump">
-            <div class="pump-icon">💧</div>
-            <div class="pump-info">
-              <div class="pump-title">Насос 2</div>
-              <div>Стан: Очікування</div>
+            <span>
+              <svg class="pump__icon">
+                <use href="./images/icons.svg#icon-pump"></use>
+              </svg>
+            </span>
+            <div class="pump__info">
+              <span class="pump__data">Сьогодні</span>
+              <span class="pump__pusk">Пусків: 99</span>
+              <span class="pump__mtg">мтг: 10:22</span>
+              <div class="pump__section"><span>насос №2</span></div>
             </div>
           </div>
         </div>
@@ -271,6 +332,7 @@
         <span class="sidebar__footer-count">3</span>
       </div>
     </div>
+    <script src="./js/status.js"></script>
     <script src="./js/calendar.js"></script>
     <script src="./js/modal.js"></script>
   </body>

@@ -24,9 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #3a3f4b;
+  padding-bottom: 12px;
 }
 
 .wifi-indicator {
@@ -63,6 +61,8 @@
 .system-state {
   display: flex;
   justify-content: space-between;
+  height: 105.6637420654px;
+  align-items: flex-end;
 }
 
 .system-status {
@@ -72,6 +72,7 @@
   box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .system-title {
@@ -80,7 +81,7 @@
   font-weight: 700;
   font-size: 16px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 .system-list {
@@ -91,6 +92,28 @@
   font-size: 12px;
   list-style: none;
   text-transform: uppercase;
+  margin-bottom: 10.9px;
+  margin-left: 21.1px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  width: 153.2934570313px;
+  height: 21.2231445313px;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.status-shape {
+  width: 21.2231445313px;
+  height: 21.2231445313px;
+  border-radius: 50%;
+  background-color: #27282c;
+  box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .status-indicator {
@@ -98,39 +121,90 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  margin-right: 10px;
-  background-color: #666;
+  background-color: #8f8f8f;
 }
 
-.alert-panel,
-.pumps-container {
+.status-item.active-status .status-text {
+  color: #00ffff;
+}
+
+.status-item.active-status .status-indicator {
+  background-color: #00ffff;
+}
+
+.index {
+  width: 380.1171875px;
+  height: 98.5328063965px;
+}
+.index__list {
+  list-style: none;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+.index__item-bell {
+  width: 56.573261261px;
+  height: 96.959564209px;
+  padding: 29.48px 12px;
+}
+.index__icon-bell {
+  width: 29.8916091919px;
+  height: 38.0013275146px;
+  fill: none;
+}
+.index__item {
+  width: 56.573261261px;
+  height: 96.959564209px;
+  border-radius: 10px;
+  box-shadow: -3px -5px 8px 0px #313439, 3px 5px 8px 0px #1d1e21, 0px 1px 8px 0px rgba(29, 30, 33, 0.2) inset;
+  margin-left: 20.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.index__line {
+  height: 1px;
+  width: 39.2px;
+  background-color: #1b1b1b;
+  border: none;
+  margin: 0 8px;
+}
+.index__figure {
+  display: flex;
+  justify-content: center;
+  margin: 18.6px 0 16.27px;
+}
+.index__count {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.pumps-container {
+  margin-top: 21.5px;
+  display: flex;
+}
+.pumps-container .pump:nth-child(2) {
+  margin-left: 19.84px;
 }
 
 .pump {
   display: flex;
-  align-items: center;
-  background-color: rgba(30, 35, 45, 0.7);
-  padding: 15px;
-  border-radius: 6px;
-  width: 45%;
+  width: 380.1171875px;
+  height: 98.5328063965px;
+  background: #27282c;
+  box-shadow: 0px 5px 6px 0px #1e1f22 inset, 0px -2px 4px 0px #2f3338 inset;
+  border-radius: 10px;
 }
-.pump .pump-icon {
-  margin-right: 15px;
-  color: #00c8ff;
+.pump__icon {
+  width: 33px;
+  height: 49px;
+  fill: none;
+  margin: 26px 23px 26px 27.42px;
 }
-.pump .pump-info {
-  color: #8f8f8f;
-  font-size: 12px;
+.pump__info {
+  display: flex;
+  flex-direction: column;
 }
-.pump .pump-title {
-  font-weight: bold;
-  margin-top: 5px;
-  font-size: 16px;
-}
-
 .monitoring-panel {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
